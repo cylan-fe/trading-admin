@@ -6,6 +6,7 @@ export const DummyButton = () => {
   const handler = () => {
     console.log("clicked>>>");
   };
+  const abc_unused = "xxcdspd";
   return (
     <div className="flex flex-col items-center justify-center h-screen">
       <span>{a}</span>
