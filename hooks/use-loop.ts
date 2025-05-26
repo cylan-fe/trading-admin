@@ -8,3 +8,13 @@ export const useLoop = (fn: () => void) => {
   console.log("useLoop");
   return { loopFn };
 };
+
+export const useLoop2 = (loopCount, fn) => {
+  const loopFn = useCallback(() => {
+    while (loopCount) {
+      fn();
+      loopCount--;
+    }
+  }, []);
+  return {};
+};
