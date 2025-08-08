@@ -1,9 +1,16 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { DashboardCharts } from "@/components/dashboard/dashboard-charts"
-import { DashboardStats } from "@/components/dashboard/dashboard-stats"
-import { RecentTransactions } from "@/components/dashboard/recent-transactions"
-import { RecentUsers } from "@/components/dashboard/recent-users"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { DashboardCharts } from "@/components/dashboard/dashboard-charts";
+import { DashboardStats } from "@/components/dashboard/dashboard-stats";
+import { RecentTransactions } from "@/components/dashboard/recent-transactions";
+import { RecentUsers } from "@/components/dashboard/recent-users";
+import { AdvancedAnalysisButton } from "@/components/dashboard/advanced-analysis-button";
 
 export default function DashboardPage() {
   return (
@@ -52,6 +59,7 @@ export default function DashboardPage() {
               <div className="h-[400px] flex items-center justify-center text-muted-foreground">
                 高级分析内容将在此显示
               </div>
+              <AdvancedAnalysisButton />
             </CardContent>
           </Card>
         </TabsContent>
@@ -75,11 +83,13 @@ export default function DashboardPage() {
               <CardDescription>查看所有系统通知和警报</CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="h-[400px] flex items-center justify-center text-muted-foreground">系统通知将在此显示</div>
+              <div className="h-[400px] flex items-center justify-center text-muted-foreground">
+                系统通知将在此显示
+              </div>
             </CardContent>
           </Card>
         </TabsContent>
       </Tabs>
     </div>
-  )
+  );
 }
